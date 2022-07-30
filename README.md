@@ -65,6 +65,8 @@ def newtons_method(f,df,x0,epsilon,max_iterations):
     #maximum number of iterations exceeded
     return float('nan')
 
+#--------->
+
 funct = lambda x: x**5 - x*5 + 3
 d_funct = lambda x: 5*x**4 - 5
 
@@ -119,6 +121,17 @@ def newton_fractal(f, fprime, n=100, domain=(-1, 1, -1, 1)):
     plt.axis('off')
     plt.show()
 
+#--------->
+
+# Julia Nova fractal for f(z) = z3 − 1
+#funct = lambda z: z**3 - 1
+#d_funct = lambda z: 3*z**2
+
+#blackpenredpen calculus newton's method video plynomial
+#funct = lambda x: x**5 - x*5 + 3
+#d_funct = lambda x: 5*x**4 - 5
+
+#3Blue1Brown newton’s method video polynomial 
 funct = lambda z: z**5 + z**2 - z + 1
 d_funct = lambda z: 5*z**4 + 2 * z - 1
 
