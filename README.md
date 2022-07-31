@@ -25,10 +25,10 @@ If no bounding is used then we do not know how close we are to a solution, newto
 $|f(x_n)| < \epsilon$ or $|x_n - x_{n-1}| < \delta$ are frequently used as stoppers.
 
 <br/>
-The first one check for convergence of the $x_n$ absolute value, $\epsilon$ being the threshold (0.1, 0.0001,1e-12) when the absolute value of xn approaches 0 (root or x intercept) it cease when $\epsilon$ is crossed.
+The first one check for convergence of the $f(x_n)$ absolute value, $\epsilon$ being the threshold (0.1, 0.0001,1e-12) when the absolute value obtained from applying $x_n$ to $f()$ approaches 0 (root or x intercept) it ceases when it is less than $\epsilon$.
 
 
-The second check for convergence of the difference between $x_n$ and $x_{n-1}$ absolute values, $\delta$ being the threshold (0.1, 0.0001,1e-12) when this difference crosses $\delta$ it ceases, it is approaching the value of x such that $f(x)=0$
+The second check for convergence of the difference between $x_n$ and $x_{n-1}$ absolute values, $\delta$ being the threshold (0.1, 0.0001,1e-12) when this difference is less than $\delta$ it ceases, it is approaching the value of x such that $f(x)=0$
 <br/>
 
 We will use $|f(x_n)| < \epsilon$ in this case.
@@ -126,6 +126,10 @@ def newton_fractal(f, fprime, n=100, domain=(-1, 1, -1, 1)):
 # Julia Nova fractal for f(z) = z3 − 1
 #funct = lambda z: z**3 - 1
 #d_funct = lambda z: 3*z**2
+
+# DiegoAlfa7 suggested me this polynomial
+#funct = lambda x: ((2*x+6)**(1/3))+5*x**3
+#d_funct = lambda x: ((1/3)*(2*x+6)**(-2/3)) + 15*x**2
 
 #blackpenredpen calculus newton's method video plynomial
 #funct = lambda x: x**5 - x*5 + 3
